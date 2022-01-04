@@ -1,3 +1,5 @@
+package goldmanSachs;
+
 import java.util.*;
 
 class Solution {
