@@ -7,15 +7,18 @@ class Solution {
     public ArrayList<String> generate(int N) {
         // Your code here
         ArrayList<String> ans = new ArrayList<String>();
-        for (int i = 1; i <= N; i++) {
-            StringBuilder sb = new StringBuilder("");
-            int x, n = i;
-            while (n > 0) {
-                x = n % 2;
-                sb.insert(0, x);
-                n = n / 2;
+        Queue<String> queue = new LinkedList<String>();
+        queue.add("1");
+        int k = 0;
+        while (true) {
+            String curr = queue.poll();
+            ans.add(curr);
+            k++;
+            if (k == N) {
+                break;
             }
-            ans.add(sb.toString());
+            queue.add(curr + "0");
+            queue.add(curr + "1");
         }
         return ans;
     }

@@ -114,7 +114,6 @@ public class TreeSum {
             int x = Integer.parseInt(br.readLine());
             Tree tr = new Tree();
             System.out.println(tr.countSubtreesWithSumX(root, x));
-
         }
 
     }
